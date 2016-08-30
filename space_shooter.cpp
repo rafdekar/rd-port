@@ -6,13 +6,13 @@
 #include <sstream>
 using namespace std;
 
-class pudla
+class pudla //class responsible for storing and making asteroids
 {	
 public:
 	vector < sf::Sprite > pudla_kontener;
 	sf::Texture tekstura_pudla;
 	sf::Sprite pudlo;
-	void stworz_pudlo( int pudlo_x, int pudlo_y )
+	void stworz_pudlo( int pudlo_x, int pudlo_y ) //making asteroid using graphics file called"met.png"
 	{
 		tekstura_pudla.loadFromFile( "Grafika/met.png" );
 		pudlo.setTexture( tekstura_pudla );
@@ -21,7 +21,7 @@ public:
 	}
 };
 
-class gwiazdy
+class gwiazdy //making stars for background needs
 {	
 public:
 	vector < sf::Sprite > gwiazdy_kontener;
@@ -36,7 +36,7 @@ public:
 	}
 };
 
-class pociski
+class pociski //making bullets for spaceship
 {
 public:
 	vector < sf::Sprite > pociski_kontener;
@@ -51,7 +51,7 @@ public:
 	}
 };
 
-class wybuchy
+class wybuchy // class responsible for storing and making explosions
 {
 public:
 	vector < sf::Sprite > wybuchy_kontener;
